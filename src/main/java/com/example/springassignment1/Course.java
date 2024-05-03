@@ -1,3 +1,4 @@
+
 package com.example.springassignment1;
 
 import jakarta.persistence.Entity;
@@ -16,41 +17,38 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @NotNull
-    @NotBlank()
+    @NotBlank(message = "Name is required")
     @Size(min = 2, max = 50)
     private String name;
 
     private String description;
     private String category; // Added category attribute
 
+    //Getters And Setters For ID
     public void setId(int id) {
         this.id = id;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public int getId() {
         return id;
     }
-
+    //Getters And Setters For Name
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getName() {
         return name;
     }
-
+    //Getters and Setters for Description
+    public void setDescription(String description) {
+        this.description = description;
+    }
     public String getDescription() {
         return description;
     }
-
+    //Getters and Setters For Category
+    public void setCategory(String category) {
+        this.category = category;
+    }
     public String getCategory() {
         return category;
     }
