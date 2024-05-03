@@ -1,4 +1,3 @@
-
 package com.example.springassignment1;
 
 import jakarta.persistence.Entity;
@@ -20,8 +19,13 @@ public class Course {
     @NotBlank(message = "Name is required")
     @Size(min = 2, max = 50)
     private String name;
-
+    @NotNull
+    @NotBlank(message = "Description is required")
+    @Size(min = 2, max = 50)
     private String description;
+    @NotNull
+    @NotBlank(message = "Category is required")
+    @Size(min = 2, max = 50)
     private String category; // Added category attribute
 
     //Getters And Setters For ID
